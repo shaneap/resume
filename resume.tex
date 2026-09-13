@@ -1,0 +1,171 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%-------------------------------------------------------------------------------
+% DENSITY KNOBS -- adjust these first if content overflows one page.
+%-------------------------------------------------------------------------------
+\newcommand{\bulletsep}{-2pt}
+\newcommand{\sectionsep}{-8pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.6in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{\sectionsep}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------------------------------------------------------------
+% CUSTOM COMMANDS
+%-------------------------------------------------------------------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{\bulletsep}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeEducationNote}[1]{
+  \vspace{4pt}\item
+  \small{#1}\vspace{-4pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\appallingunderline}[1]{%
+  \underline{\smash{#1}\vphantom{T}}\vphantom{#1}%
+}
+
+%===============================================================================
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Shane Patandin} \\ \vspace{2pt}
+    \small
+    \href{mailto:shane.a.patandin@gmail.com}{\appallingunderline{shane.a.patandin@gmail.com}} $|$
+    \href{https://linkedin.com/in/shane-patandin}{\underline{LinkedIn}} $|$
+    \href{https://github.com/shaneap}{\underline{GitHub}}
+\end{center}
+
+%----------EDUCATION----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Stony Brook University}{Stony Brook, NY}
+      {Master of Science: Data Science}{Expected December 2026}
+    \resumeSubheading
+      {Stony Brook University}{Stony Brook, NY}
+      {Bachelor of Science: Applied Mathematics and Statistics, Economics --- GPA: 3.5}{May 2025}
+    \resumeEducationNote{\textbf{Relevant Coursework:} Statistical Learning, Data Mining, Linear Regression, Probability Theory, Quantitative Finance, Mathematical Statistics, Data Analysis, Econometrics, Linear Algebra}
+  \resumeSubHeadingListEnd
+
+%----------EXPERIENCE----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Stony Brook University}{Stony Brook, NY}
+      {Research Assistant}{June 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Engineering MetaGlass, an Android application that helps blind users locate and interpret visual charts/graphs in real time using Meta Ray-Ban smart glasses, combining computer vision, sensor fusion, and audio feedback.}
+        \resumeItem{Building a real-time multi-phase pipeline (scan, align, capture, analyze, narrate) that integrates ML Kit object detection and text recognition with a hybrid spatial-tracking system ($\sim$5--15ms latency) to guide users via directional audio cues.}
+        \resumeItem{Integrate proprietary software for multimodal chart analysis, using OpenCV-based pre-cropping and bounding-box refinement to improve description accuracy, with results delivered via text-to-speech narration.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Artemis Speakeasy}{Ronkonkoma, NY}
+      {Data Scientist Intern}{May 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Building and auditing data pipelines for a restaurant's Toast POS order-level data, fixing statistical issues to produce clean VPCPM (value per customer per 15-min) metrics for downstream optimization.}
+        \resumeItem{Investigating a table-overbooking anomaly affecting $\sim$47\% of order records and building confound-adjusted regression to separate true table value from party-size, day-of-week, and time-of-day effects, ahead of constructing a queuing model, integer linear program, and discrete-event simulation for seating optimization.}
+        \resumeItem{Planning inventory and staffing optimization models (newsvendor model for meat/steak purchase orders, revenue-vs-labor-cost thresholds for operating hours) and longer-term demand forecasting (XGBoost/LightGBM, Prophet, potentially LSTM) using time, day, holiday, and weather features.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Stony Brook University}{Stony Brook, NY}
+      {Resident Assistant (RA)}{August 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Provided leadership and mentorship to 100+ residents, coordinating programming, communication, and administrative workflows in a high-responsibility environment.}
+        \resumeItem{Managed programming and operational workflows, balancing event coordination, documentation, and policy compliance with attention to detail.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Stony Brook University}{Stony Brook, NY}
+      {Teaching Assistant (TA) --- Applied Linear Algebra}{August 2024 -- December 2024}
+      \resumeItemListStart
+        \resumeItem{Supported professor in delivering course material, helping students understand complex linear algebra concepts such as vector spaces, matrix transformations, eigenvalues, and eigenvectors.}
+        \resumeItem{Assisted in grading 176 assignments and exams, ensuring accurate and timely feedback on student performance.}
+        \resumeItem{Conducted weekly office hours to reinforce course content, address student questions, and provide targeted support for individual learning needs.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%----------PROJECTS----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Bank Term Deposit Prediction} $|$ \href{https://github.com/shaneap}{\underline{GitHub}}}{April 2026 -- Present}
+          \resumeItemListStart
+            \resumeItem{Led model fine-tuning and hyperparameter optimization using Optuna across XGBoost, LightGBM, and Random Forest classifiers on highly imbalanced dataset, improving balanced accuracy over untuned baselines.}
+            \resumeItem{Implemented a GPU-trained FT-Transformer with learned categorical embeddings, 8-head self-attention, and validation-based early stopping, achieving the best balanced accuracy among all non-leakage models.}
+            \resumeItem{Designed a leakage-aware preprocessing pipeline using SMOTE and scaling inside CV folds, and demonstrated the inflation effect when using future data.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%----------SKILLS----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Python, SQL, R, SAS} \\
+     \textbf{Libraries}{: Scikit-learn, PyTorch, Pandas, NumPy, Matplotlib, ggplot2} \\
+     \textbf{Databases \& Tools}{: PostgreSQL, SQLAlchemy, Docker, Git, GitHub} \\
+    }}
+ \end{itemize}
+
+
+\end{document}

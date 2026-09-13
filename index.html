@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shane Patandin — Resume</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #525659;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .bar {
+    background: #202124;
+    color: #fff;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .bar strong { font-size: 14px; font-weight: 600; }
+  .bar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid #666;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .bar a:hover { background: #333; }
+  .viewer { width: 100%; height: calc(100% - 46px); border: none; display: block; }
+  .fallback {
+    color: #eee;
+    text-align: center;
+    padding: 60px 20px;
+    display: none;
+  }
+  .fallback a { color: #8ab4f8; }
+  @media (max-width: 480px) {
+    .bar strong { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <strong>Shane Patandin — Resume</strong>
+    <a href="resume.pdf" download>Download PDF</a>
+  </div>
+  <embed class="viewer" src="resume.pdf" type="application/pdf" />
+  <div class="fallback" id="fallback">
+    Your browser can't preview PDFs inline.
+    <a href="resume.pdf">Open the resume directly</a>.
+  </div>
+  <script>
+    // Some mobile browsers silently fail to render <embed> PDFs; show a fallback link.
+    setTimeout(function () {
+      var embed = document.querySelector('embed.viewer');
+      if (embed && embed.offsetHeight === 0) {
+        document.getElementById('fallback').style.display = 'block';
+      }
+    }, 800);
+  </script>
+</body>
+</html>
