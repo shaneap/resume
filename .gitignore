@@ -1,6 +1,9 @@
 *.aux
 *.log
 *.out
-resume.pdf
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
 build/
 site/
