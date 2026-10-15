@@ -111,9 +111,9 @@
       {Artemis Speakeasy}{Ronkonkoma, NY}
       {Data Scientist Intern}{May 2026 -- Present}
         \resumeItemListStart
-          \resumeItem{Building and auditing data pipelines for a restaurant's Toast POS order-level data, fixing statistical issues to produce clean VPCPM (value per customer per 15-min) metrics for downstream optimization.}            
-          \resumeItem{Investigating a table-overbooking anomaly affecting $\sim$47\% of order records and building confound-adjusted regression to separate true table value from party-size, day-of-week, and time-of-day effects, ahead of constructing a queuing model, integer linear program, and discrete-event simulation for seating optimization.}
-          \resumeItem{Planning inventory and staffing optimization models (newsvendor model for meat/steak purchase orders, revenue-vs-labor-cost thresholds for operating hours) and longer-term demand forecasting (XGBoost, LightGBM, Prophet) using time, day, holiday, and weather features.}
+          \resumeItem{Built a PostgreSQL warehouse (raw, staging, star schema) over 17 months of Toast POS data ($\sim$106K item lines, $\sim$\$2.3M sales) with an idempotent Python loader, 37 unit tests, and 18 invariant checks; cut full refresh from 96s to 6s by diagnosing a query planner misestimate and materializing staging.}
+          \resumeItem{Overturned the owner's hypothesis that table turn speed limited revenue: occupancy modeling showed 29\% median utilization, valuing faster turns at $\sim$\$9K/yr rather than the \$156K a naive estimate implied.}
+          \resumeItem{Separated decline from seasonality with seasonally adjusted regression, finding parties per night down $\sim$14\%/yr (95\% CI $-19\%$ to $-8\%$) while spend per guest rose 8\%, driven by menu mix rather than pricing.}
         \resumeItemListEnd
 
     \resumeSubheading
