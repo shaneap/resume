@@ -112,18 +112,18 @@
       {Artemis Speakeasy}{Ronkonkoma, NY}
       {Data Scientist Intern}{May 2026 -- Present}
         \resumeItemListStart
-          \resumeItem{Engineered a PostgreSQL data warehouse for 17 months of restaurant sales data (about \$2.3M), with automated testing and a 16x faster refresh (96s to 6s).}
-          \resumeItem{Corrected an initial \$156K/yr estimate for faster table turns to about \$9K by showing that revenue was constrained by demand rather than turnover, with 29\% average occupancy.}
-          \resumeItem{Quantified an annual decline of about 14\% in customer volume after adjusting for seasonality, offset in part by an 8\% rise in spend per guest driven by menu mix.}
+          \resumeItem{Engineered a PostgreSQL data warehouse for 17 months of restaurant sales data (about \$2.3M), with automated testing and a \textbf{16x faster refresh} (96s to 6s).}
+          \resumeItem{Corrected an initial estimate for faster table turns \textbf{from \$156K/yr to about \$9K} by showing that revenue was constrained by demand rather than turnover, with 29\% average occupancy.}
+          \resumeItem{Quantified an annual decline of \textbf{about 14\% in customer volume} after adjusting for seasonality, offset in part by an 8\% rise in spend per guest driven by menu mix.}
         \resumeItemListEnd
 
     \resumeSubheading
       {Stony Brook University}{Stony Brook, NY}
-      {Research Assistant}{June 2026 -- Present}
+      {Research Assistant, Visual Analytics and Imaging Lab}{June 2026 -- Present}
       \resumeItemListStart
-        \resumeItem{Redesigned the capture pipeline so the compressed video stream only locates and aligns the chart, then analyzes a full resolution photo from the glasses (1080x1440 vs 720x1280), with spoken turn and tilt cues guiding blind users to center the chart.}
-        \resumeItem{Fixed an out of memory crash that killed the app after about 5 captures by halving the frame buffer and plugging per capture bitmap leaks, and added an OpenAI to Gemini to on device OCR fallback so API rate limits no longer crash analysis.}
-        \resumeItem{Used real device data to remove an OCR gate that rejected 13 of 14 valid chart detections, and traced degraded detection across 1,000+ logged frames to the glasses SDK silently downscaling the stream on weak Bluetooth links, affecting 92\% of frames.}
+        \resumeItem{Redesigned the capture pipeline so the compressed stream only locates and aligns the chart, then analyzes a \textbf{full resolution photo} from the glasses (1080x1440 vs 720x1280), with spoken cues guiding blind users to center it.}
+        \resumeItem{Fixed an \textbf{out of memory crash} after about 5 captures by halving the frame buffer and plugging bitmap leaks, and added an OpenAI to Gemini to on device OCR fallback so API rate limits no longer crash analysis.}
+        \resumeItem{Used real device data to remove an OCR gate rejecting 13 of 14 valid charts, and traced degraded detection across 1,000+ logged frames to the glasses SDK silently downscaling the stream on weak Bluetooth, affecting \textbf{92\% of frames}.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -131,7 +131,7 @@
       {Resident Assistant (RA)}{August 2024 -- Present}
       \resumeItemListStart
         \resumeItem{Mentor and support 100+ residents as a first point of contact through on call duty, front desk check ins, and community programming for students from many countries.}
-        \resumeItem{Surveyed 109 RAs with a partner and applied NLP to their written responses, finding that 58\% believed fewer required events would improve quality and that veteran RAs were 2.5x as likely as first years to say requirements hurt quality (47\% vs 19\%); presented recommendations to the university's AICE committee.}
+        \resumeItem{Surveyed 109 RAs with a partner and applied NLP to their written responses, finding that 58\% said fewer events would improve quality and veteran RAs were \textbf{2.5x as likely} as first years to say requirements hurt quality (47\% vs 19\%); presented recommendations to the AICE committee.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -143,9 +143,16 @@
       \resumeProjectHeading
           {\textbf{Traffic Safety Analysis on Long Island} $|$ \href{https://github.com/shaneap/AMS-597-Project}{\underline{GitHub}}}{April 2026}
           \resumeItemListStart
-            \resumeItem{Identified four accident archetypes across 33,000+ Long Island crash records using FAMD dimensionality reduction with k-Means, reaching a silhouette score of 0.43 versus 0.16 for a k-Prototypes baseline.}
+            \resumeItem{Identified four accident archetypes across 33,000+ Long Island crash records using FAMD dimensionality reduction with k-Means, reaching a \textbf{silhouette score of 0.43 versus 0.16} for a k-Prototypes baseline.}
             \resumeItem{Built an XGBoost severity classifier on 26 engineered weather, infrastructure, and temporal features, with 5-fold CV confirming stable out of sample performance.}
-            \resumeItem{Detected 12 accident corridors along the LIE and Northern/Southern State Parkways with DBSCAN on projected coordinates, cross-referenced against the archetypes to target safety interventions.}
+            \resumeItem{Detected \textbf{12 accident corridors} along the LIE and Northern/Southern State Parkways with DBSCAN on projected coordinates, cross-referenced against the archetypes to target safety interventions.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Bank Term Deposit Prediction} $|$ \href{https://github.com/shaneap/bank-deposit-prediction}{\underline{GitHub}}}{April 2026 -- Present}
+          \resumeItemListStart
+            \resumeItem{Tuned XGBoost, LightGBM, and Random Forest classifiers with Optuna on a highly imbalanced dataset, improving balanced accuracy over untuned baselines.}
+            \resumeItem{Built a GPU-trained FT-Transformer in PyTorch that achieved the best balanced accuracy among non-leakage models, with SMOTE and scaling applied inside CV folds to prevent leakage.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
