@@ -121,9 +121,9 @@
       {Stony Brook University}{Stony Brook, NY}
       {Research Assistant}{June 2026 -- Present}
       \resumeItemListStart
-        \resumeItem{Engineering MetaGlass, an Android application that helps blind users locate and interpret visual charts/graphs in real time using Meta Ray-Ban smart glasses, combining computer vision, sensor fusion, and audio feedback.}
-        \resumeItem{Building a real-time multi-phase pipeline (scan, align, capture, analyze, narrate) that integrates ML Kit object detection and text recognition with a hybrid spatial-tracking system (about 5--15ms latency) to guide users via directional audio cues.}
-        \resumeItem{Integrating the lab's LLM chart interpretation system for multimodal chart analysis, using OpenCV pre-cropping and bounding box refinement to improve description accuracy, with results narrated through text to speech.}
+        \resumeItem{Redesigned the capture pipeline so the compressed video stream only locates and aligns the chart, then analyzes a full resolution photo from the glasses (1080x1440 vs 720x1280), with spoken turn and tilt cues guiding blind users to center the chart.}
+        \resumeItem{Fixed an out of memory crash that killed the app after about 5 captures by halving the frame buffer and plugging per capture bitmap leaks, and added an OpenAI to Gemini to on device OCR fallback so API rate limits no longer crash analysis.}
+        \resumeItem{Used real device data to remove an OCR gate that rejected 13 of 14 valid chart detections, and traced degraded detection across 1,000+ logged frames to the glasses SDK silently downscaling the stream on weak Bluetooth links, affecting 92\% of frames.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -131,7 +131,7 @@
       {Resident Assistant (RA)}{August 2024 -- Present}
       \resumeItemListStart
         \resumeItem{Mentor and support 100+ residents as a first point of contact through on call duty, front desk check ins, and community programming for students from many countries.}
-        \resumeItem{Surveyed 109 RAs with a partner and applied NLP to their written responses, presenting recommendations on programming requirements to the university's AICE committee.}
+        \resumeItem{Surveyed 109 RAs with a partner and applied NLP to their written responses, finding that 58\% believed fewer required events would improve quality and that veteran RAs were 2.5x as likely as first years to say requirements hurt quality (47\% vs 19\%); presented recommendations to the university's AICE committee.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
