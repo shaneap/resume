@@ -4,6 +4,8 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.latexmkrc
 *.toc
 build/
 site/
+Shane_Patandin_Resume.pdf

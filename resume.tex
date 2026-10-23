@@ -88,7 +88,8 @@
     \href{mailto:shane.a.patandin@gmail.com}{\appallingunderline{shane.a.patandin@gmail.com}} $|$
     \href{https://linkedin.com/in/shane-patandin}{\underline{LinkedIn}} $|$
     \href{https://github.com/shaneap}{\underline{GitHub}} $|$
-    U.S Citizen
+    Stony Brook, NY $|$
+    U.S. Citizen
 \end{center}
 
 %----------EDUCATION----------
@@ -111,35 +112,27 @@
       {Artemis Speakeasy}{Ronkonkoma, NY}
       {Data Scientist Intern}{May 2026 -- Present}
         \resumeItemListStart
-          \resumeItem{Engineered a PostgreSQL data warehouse for 17 months of restaurant sales data ($\sim$\$2.3M), with automated testing and a 16x faster refresh (96s to 6s).}
-          \resumeItem{Demonstrated that revenue was constrained by demand rather than table turnover, with 29\% average occupancy valuing faster turns at $\sim$\$9K/yr instead of the estimated \$156K.}
-          \resumeItem{Quantified a $\sim$14\% annual decline in customer volume after adjusting for seasonality, offset in part by an 8\% rise in spend per guest driven by menu mix.}
+          \resumeItem{Engineered a PostgreSQL database for 17 months of restaurant sales data (about \$2.3M), with automated testing and a \textbf{16x faster refresh} (96s to 6s).}
+          \resumeItem{Discovered \textbf{revenue was limited by demand}, not table turnover (room never full; median utilization 29\%), redirecting the owner from speeding up service ($\sim$1\% of sales) toward bringing in more customers.}
+          \resumeItem{Found a \textbf{$\sim$14\%/yr decline} in customer volume after adjusting for seasonality, partly offset by an 8\% rise in spend per guest from menu mix. Recommended advertising specials earlier and across more platforms.}
         \resumeItemListEnd
 
     \resumeSubheading
       {Stony Brook University}{Stony Brook, NY}
-      {Research Assistant}{June 2026 -- Present}
+      {Research Assistant, Visual Analytics and Imaging Lab}{June 2026 -- Present}
       \resumeItemListStart
-        \resumeItem{Engineering MetaGlass, an Android application that helps blind users locate and interpret visual charts/graphs in real time using Meta Ray-Ban smart glasses, combining computer vision, sensor fusion, and audio feedback.}
-        \resumeItem{Building a real-time multi-phase pipeline (scan, align, capture, analyze, narrate) that integrates ML Kit object detection and text recognition with a hybrid spatial-tracking system ($\sim$5--15ms latency) to guide users via directional audio cues.}
-        \resumeItem{Integrate proprietary software for multimodal chart analysis, using OpenCV-based pre-cropping and bounding-box refinement to improve description accuracy, with results delivered via text-to-speech narration.}
+        \resumeItem{Adapting the lab's LLM chart reading system to Meta smart glasses for blind and low vision users, redesigning capture so the compressed stream locates the chart and a full resolution photo (1080x1440) is analyzed, with spoken cues guiding users to center it.}
+        \resumeItem{Traced degraded detection across 1,000+ logged frames to the glasses SDK silently downscaling the stream on weak Bluetooth, which affected 92\% of frames, and removed an OCR gate that rejected 13 of 14 valid charts on real device data.}
+        \resumeItem{Fixed an out-of-memory crash after $\sim$5 captures by halving the frame buffer and plugging bitmap leaks, and added an OpenAI, then Gemini, then on-device OCR fallback so API rate limits no longer stop analysis.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Stony Brook University}{Stony Brook, NY}
       {Resident Assistant (RA)}{August 2024 -- Present}
       \resumeItemListStart
-        \resumeItem{Provided leadership and mentorship to 100+ residents, coordinating programming, communication, and administrative workflows in a high-responsibility environment.}
-        \resumeItem{Managed programming and operational workflows, balancing event coordination, documentation, and policy compliance with attention to detail.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Stony Brook University}{Stony Brook, NY}
-      {Teaching Assistant (TA) --- Applied Linear Algebra}{August 2024 -- December 2024}
-      \resumeItemListStart
-        \resumeItem{Supported professor in delivering course material, helping students understand complex linear algebra concepts such as vector spaces, matrix transformations, eigenvalues, and eigenvectors.}
-        \resumeItem{Assisted in grading 176 assignments and exams, ensuring accurate and timely feedback on student performance.}
-        \resumeItem{Conducted weekly office hours to reinforce course content, address student questions, and provide targeted support for individual learning needs.}
+        \resumeItem{Designed and administered a survey of 109 Resident Assistants, finding 58\% believed fewer required events would improve quality and veteran RAs were \textbf{2.5x as likely} as first years to say requirements hurt quality (47\% vs 19\%).}
+        \resumeItem{Built a keyword based text classification pipeline in R (dplyr, ggplot2) to extract themes from 98 open ended responses, and presented policy recommendations to Stony Brook's Academic Initiatives \& Community Engagement (AICE) committee.}
+        \resumeItem{Mentor and \textbf{support 100+ residents} as a first point of contact through on call duty, front desk check ins, and community programming for students of differing backgrounds.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -149,11 +142,19 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{Bank Term Deposit Prediction} $|$ \href{https://github.com/shaneap}{\underline{GitHub}}}{April 2026 -- Present}
+          {\textbf{Financial Fragility and Late Payment Among BNPL Users} $|$ \href{https://github.com/shaneap/bnpl}{\underline{GitHub}}}{October 2026 -- Present}
           \resumeItemListStart
-            \resumeItem{Led model fine-tuning and hyperparameter optimization using Optuna across XGBoost, LightGBM, and Random Forest classifiers on highly imbalanced dataset, improving balanced accuracy over untuned baselines.}
-            \resumeItem{Implemented a GPU-trained FT-Transformer with learned categorical embeddings, 8-head self-attention, and validation-based early stopping, achieving the best balanced accuracy among all non-leakage models.}
-            \resumeItem{Designed a leakage-aware preprocessing pipeline using SMOTE and scaling inside CV folds, and demonstrated the inflation effect when using future data.}
+            \resumeItem{Investigating whether BNPL late payment reflects household liquidity strain, and why the Fed's reported late payment rate among users rose from 18\% to 26\% (2023 to 2025), using 5 waves of SHED microdata (60,170 responses).}
+            \resumeItem{Built a reproducible Python pipeline (pandas, pytest, Make) that harmonizes all waves into one survey weighted file with a single command, \textbf{reproducing 9 of 9 published Fed BNPL statistics} to the whole percent.}
+            \resumeItem{Audited comparability across 383 question and year combinations by parsing Fed codebooks, finding wording breaks, split sample experiments, and dropped questions that left only 13 of 25 fragility measures comparable across all five waves.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Traffic Safety Analysis on Long Island} $|$ \href{https://github.com/shaneap/AMS-597-Project}{\underline{GitHub}}}{April 2026}
+          \resumeItemListStart
+            \resumeItem{Identified four accident archetypes across 33,000+ Long Island crash records with FAMD and k-Means (silhouette 0.43 vs 0.16 for k-Prototypes), isolating a late night group with \textbf{2.2x the baseline rate} of the most severe crashes.}
+            \resumeItem{Built an XGBoost severity classifier on 26 engineered weather, infrastructure, and temporal features, reaching \textbf{0.72 ROC-AUC vs 0.62} for logistic regression and cutting false positives 34\%, with 5-fold CV matching test results.}
+            \resumeItem{Mapped 12 crash hotspots along the LIE and Northern/Southern State Parkways with DBSCAN, finding morning rush crashes dominated 11 of 12, so corridor volume is commuter driven while the most severe crashes happen at night.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -162,9 +163,10 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Programming Languages}{: Python, SQL, R, SAS} \\
-     \textbf{Libraries}{: Scikit-learn, PyTorch, Pandas, NumPy, Matplotlib, ggplot2} \\
-     \textbf{Databases \& Tools}{: PostgreSQL, SQLAlchemy, Docker, Git, GitHub} \\
+     \textbf{Programming Languages}{: Python, R, SQL, SAS} \\
+     \textbf{Methods}{: Machine Learning, Regression, Classification, Clustering, NLP, Time Series, Statistical Modeling} \\
+     \textbf{Libraries}{: Scikit-learn, XGBoost, LightGBM, Optuna, PyTorch, OpenCV, Pandas, NumPy, Matplotlib, ggplot2} \\
+     \textbf{Databases \& Tools}{: PostgreSQL, SQLAlchemy, Docker, Git, GitHub, Android Studio} \\
     }}
  \end{itemize}
 
